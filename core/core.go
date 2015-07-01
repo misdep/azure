@@ -17,7 +17,8 @@ import (
 )
 
 const ms_date_layout = "Mon, 02 Jan 2006 15:04:05 GMT"
-const version = "2009-09-19"
+const version = "2014-02-14"
+const azure_storage_dns_suffix = "core.chinacloudapi.cn"
 
 type Credentials struct {
 	Account   string
@@ -225,5 +226,5 @@ func (core Core) signature() string {
 }
 
 func (core Core) webService() string {
-	return fmt.Sprintf("https://%s.blob.core.windows.net/", core.Credentials.Account)
+	return fmt.Sprintf("https://%s.blob.%s/", core.Credentials.Account, azure_storage_dns_suffix)
 }

@@ -3,7 +3,7 @@ package azure
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/loldesign/azure/core"
+	"github.com/misdep/azure/core"
 	"io"
 	"mime"
 	"net/http"
